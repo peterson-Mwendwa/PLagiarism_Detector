@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="/static/images/favicon.png" type="image/gif" />
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+
+    <header>
+      <nav class="Navbar">
+        <div class="title_">
+          <a href="/">PLAGIARISM</a>
+        </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div class="Navbar-links">
+          <ul>
+            <li>
+              <a class="link" href="{{url_for('homepage')}}">Home</a>
+            </li>
+            <li>
+              <a class="link" href="{{url_for('create_assignment')}}">Create</a>
+            </li>
+            <li>
+              <a class="link" href="{{url_for('mark_assignment')}}">Mark</a>
+            </li>
+            <li>
+              <a class="link" href="#about">About</a>
+            </li>
+            <li>
+              {% if "logged_in_teacher_id" in session or "logged_in_ta_id" in
+              session %}
+              <a class="login-button" href="{{url_for('profile')}}">Profile</a>
+              <a class="login-button" href="{{url_for('logout')}}">Log Out</a>
+              {% else %}
+              <a class="login-button" href="{{url_for('login_register')}}"
+                >Login / Register</a
+              >
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- MAIN CONTENT WILL GO HERE -->
+    {% block content %}{% endblock %}
+    <!-- Footer here -->
+    <footer id="about">
+      <div class="footer-main">
+        <div class="main-footer-heading">
+          <h1 class="sub-title">About Us</h1>
+        </div>
+        <div class="main-content">
+          <div class="left box">
+            <h2>The Team</h2>
+            <div class="team-names">
+              <span class="fas fa-angle-right"></span>
+              <span class="text">Valilian Peterson Mwendwa</span>
+            </div>
+            <div class="team-names">
+              <span class="fas fa-angle-right"></span>
+              <span class="text">Timon Opiyo</span>
+            </div>
+            <div class="team-names">
+              <span class="fas fa-angle-right"></span>
+              <span class="text">Ishmael Kipyegon</span>
+            </div>
+            <div class="team-names">
+              <span class="fas fa-angle-right"></span>
+              <span class="text">Dennis Korir</span>
+            </div>
+            <div class="team-names">
+              <span class="fas fa-angle-right"></span>
+              <span class="text">Kevin Kiptum</span>
+            </div>
+            <div class="team-names">
+              <span class="fas fa-angle-right"></span>
+              <span class="text">John Karanja</span>
+            </div>
+          </div>
+          <div class="vl"></div>
+          <div class="right box">
+            <h2>Contact Us</h2>
+            <div class="content">
+              <p>
+                We're here to assist you! If you have questions, encounter
+                issues, or need support regarding our plagiarism report system,
+                don't hesitate to reach out. You can connect with us via email
+                at petersonmwendwa903@gmail.com or call us at 0748071711. Our
+                team is dedicated to ensuring a seamless experience and is ready
+                to address any feedback or concerns you may have.
+              </p>
+            </div>
+          </div>
+          <div class="far-right">
+            <ul
+              style="
+                list-style: none;
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <li>
+                <a
+                  href="https://github.com/peterson-Mwendwa/"
+                  style="text-decoration: none"
+                  >Github</a
+                >
+              </li>
+              <li>
+                <a href="https://twitter.com" style="text-decoration: none"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="www.linkedin.com/in/peterson-mwendwa-1061b4257"
+                  style="text-decoration: none"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/static/js/base.js"></script>
+</html>

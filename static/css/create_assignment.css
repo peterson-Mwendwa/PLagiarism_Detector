@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins &display=swap");
+.shadow-box {
+  padding: 2rem;
+}
+#confirmation-table {
+  background-color: white;
+  width: 100%;
+  overflow-y: scroll;
+}
+.secondary {
+  margin-top: 1.6rem;
+  padding: 1rem;
+  background-color: white;
+  overflow-x: scroll;
+}
+.main-div {
+  width: 50%;
+}
+.new-test-case-btn {
+  color: var(--tertiary-bg-color) !important;
+  border-color: var(--tertiary-bg-color) !important;
+}
+.new-test-case-btn:hover {
+  background-color: var(--tertiary-bg-color);
+  color: var(--light-color) !important;
+}
+@media (max-width: 769px) {
+  .main-div {
+    width: 100%;
+  }
+}
+.link{
+  text-decoration: none;
+  color: #fd7014;
+}
+.link:hover{
+  color: white;
+}
