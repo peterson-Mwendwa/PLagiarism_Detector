@@ -4,6 +4,17 @@ This project has been forked from [https://github.com/SE-19/autograding-of-cs-co
 
 # autograding-of-cs-courses
 
+![First screen](./screenshots/screen1.png)
+**Home page**
+![First screen](./screenshots/screen2.png)
+**Assignment about**
+![First screen](./screenshots/screen3.png)
+**Assignment about**
+![First screen](./screenshots/screen4.png)
+**Create assignment**
+![First screen](./screenshots/screen5.png)
+**create assignment file**
+
 5th Semester project for SE subject offered by UET, Lahore.
 
 To run:
