@@ -1,7 +1,6 @@
 
 # Plagiarism Detector 📚🔍
 
-![Plagiarism Detector Logo](./screenshots/logo.png) <!-- Replace with your logo -->
 
 ## Table of Contents 📑
 1. [Introduction](#introduction)
